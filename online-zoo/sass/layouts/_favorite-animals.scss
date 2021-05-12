@@ -1,0 +1,95 @@
+.favorite-animals {
+    background-image: url(./../assets/panda-bg.png);
+    padding-top: 3rem;
+    background-size: cover;
+    @include media-tablet {
+        display: none;
+    }
+    @include media-mobile {
+        display: block;
+        background-position-x: 78%;
+        padding-bottom: 40px;
+    }
+}
+
+.favorite-animals__wrapper {
+    display: flex;
+    @include media-mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+.favorite-animals__content {
+    flex-basis: 52%;
+}
+
+.favorite-animals_title {
+    padding-top: 7.3rem;
+    span {
+        font-weight: 700
+    }
+    @include media-mobile {
+        padding: 0;
+    }
+}
+
+.favorite-animals_text {
+    @include font(1.4rem, 2rem, normal);
+    color: $light-color;
+    max-width: 48rem;
+    padding-top: 3rem;
+    @include media-laptop {
+        @include font(1.6rem, 3rem, normal)
+    }
+}
+
+.favorite-animals_buttons {
+    @include media-mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.favorite-animals_button {
+    color: $primary-color;
+    padding: 1.4rem 8.4rem;
+    background-color: #fff;
+    margin: 8.7rem 0 0 0;
+    box-shadow: 0px 2px 50px rgba(185, 213, 217, 0.6);
+    @include media-laptop {
+        margin-top: 3.7rem;
+    }
+    @include media-mobile {
+        padding: 1rem 3.4rem;
+        margin-top: 1.8rem;
+    }
+}
+
+.donate {
+    display: none;
+    @include media-mobile {
+        display: block;
+        padding: 1rem 4rem;
+    }
+}
+
+.favorite-animals_player {
+    flex-basis: 65%;
+    position: relative;
+    padding-bottom: 9rem;
+    img {
+        width: 100%;
+    }
+    @include media-mobile {
+        padding: 0;
+    }
+}
+
+.player__button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

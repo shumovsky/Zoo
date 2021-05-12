@@ -1,0 +1,44 @@
+html {
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+    max-width: $layout-width;
+    margin: 0 auto;
+    background-color: $primary-bg;
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin: 0 auto;
+    @include media-laptop {
+        padding: 0 28px
+    }
+    @include media-mobile {
+        padding: 0 10px;
+    }
+}
+
+h1 {
+    @include font(6.4rem, 8.5rem, 300);
+    font-family: Rubik, sans-serif;
+    color: $light-color;
+    margin: 0;
+    @include media-laptop {
+        @include font(4.8rem, 5.7rem, 300)
+    }
+    @include media-tablet {
+        @include font(1.6rem, 1.9rem, 500)
+    }
+    @include media-mobile {
+        @include font(3.2rem, 3.8rem, 300);
+    }
+}
+
+.title {
+    @include font(2.4rem, 2.844rem, normal);
+    font-family: Rubik, sans-serif;
+    color: $primary-color;
+    text-transform: uppercase;
+    @include media-mobile {
+        @include font(1.8rem, 2.1rem, normal)
+    }
+}

@@ -1,0 +1,22 @@
+.navigation {
+    @include font( 1.8rem, 2.4rem, 500);
+    font-family: Roboto-mono, sans-serif;
+    text-transform: uppercase;
+    flex-basis: 66%;
+    a {
+        color: $nav-color;
+    }
+    @include media-tablet {
+        display: none;
+    }
+}
+
+.navigation_list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50.2rem;
+}
+
+.link_active {
+    border-bottom: solid 2px $nav-color;
+}

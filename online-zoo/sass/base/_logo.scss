@@ -1,0 +1,10 @@
+.logo {
+    @include font(3.484rem, 4.12rem, 500);
+    font-family: Rubik, sans-serif;
+    a {
+        color: $primary-color;
+    }
+    @include media-tablet {
+        @include font(1.6rem, 1.9rem, 500)
+    }
+}

@@ -1,0 +1,99 @@
+.feed {
+    background-image: url(./../assets/Frame3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include media-tablet {
+        display: none;
+    }
+    @include media-mobile {
+        display: block;
+    }
+    @include media-mobile {
+        position: relative;
+        background-position-x: 76%;
+    }
+}
+
+.feed__header {
+    padding-top: 10.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed__title {
+    color: $nav-color;
+}
+
+.feed__button {
+    color: $primary-color;
+    letter-spacing: -0.05em;
+    background-color: $nav-color;
+    padding: 1.4rem 7.8rem;
+    filter: drop-shadow(0px 2px 20px rgba(185, 213, 217, 0.6));
+    @include media-tablet {
+        @include font(1.4rem, 1.8rem, 500);
+        padding: 1rem 5rem;
+    }
+    @include media-mobile {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.feed__cards_item {
+    position: relative;
+    flex-basis: 30%;
+    @include media-mobile {
+        margin-bottom: 7rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.feed__cards_item::before {
+    display: block;
+    content: "";
+    height: .15rem;
+    width: 26.6rem;
+    background: $nav-color;
+    top: 41%;
+    left: 70%;
+    position: absolute;
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.feed__cards {
+    @include media-mobile {
+        flex-direction: column;
+    }
+}
+
+.feed__cards_item:last-child::before {
+    display: none;
+}
+
+.feed__cards_item::after {
+    display: block;
+    content: url(./../assets/arrow.png);
+    top: 34.3%;
+    right: 75%;
+    position: absolute;
+    @include media-mobile {
+        top: -26%;
+        right: 48%;
+        transform: rotate(90deg);
+    }
+}
+
+.feed__cards_item:first-child::after {
+    display: none;
+}
+
+.feed__cards_content {
+    color: $nav-color;
+}
